@@ -2,522 +2,527 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <title>开发区分布地图</title>
-        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
-        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/guangdong.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/guangdong.js"></script>
 
 </head>
 <body>
-    <div id="3b5cd3fa8942473698ff6ee95d3d4329" style="background:#fff;width:1280px; height:780px;"></div>
-    <script>
-        var pattern = new Image()
-        // pattern.crossOrigin = 'anonymous'
-        pattern.setAttribute('crossOrigin', 'anonymous')
-        pattern.src = 'https://cdn.nlark.com/yuque/0/2024/png/42982654/1724232600579-93bc1e61-dcbd-4196-b821-cdc013c15c60.png?x-oss-process=image%2Fformat%2Cwebp'
-        var pattern1 = new Image()
-        pattern1.setAttribute('crossOrigin', 'anonymous')
-        pattern1.src = 'https://cdn.nlark.com/yuque/0/2024/png/42982654/1724232619805-bf40dff8-740c-4e77-8ea9-4fe4f87170d6.png?x-oss-process=image%2Fformat%2Cwebp'
+<div id="3b5cd3fa8942473698ff6ee95d3d4329" style='width: 1280px;height: 800px;margin:auto;'></div>
+<script>
+    var pattern = new Image()
+    // pattern.crossOrigin = 'anonymous'
+    pattern.setAttribute('crossOrigin', 'anonymous')
+    pattern.setAttribute('referrerPolicy', 'no-referrer')
+    pattern.src = 'https://img-blog.csdnimg.cn/12367d3dfe7b4a8388ee2c3835160f3c.png#pic_center'
+    var pattern1 = new Image()
+    pattern1.setAttribute('crossOrigin', 'anonymous')
+    pattern1.setAttribute('referrerPolicy', 'no-referrer')
 
-        var chart_3b5cd3fa8942473698ff6ee95d3d4329 = echarts.init(
-            document.getElementById('3b5cd3fa8942473698ff6ee95d3d4329'), 'white', {renderer: 'canvas'});
-        var option_3b5cd3fa8942473698ff6ee95d3d4329 = {
-    "animation": true,
-    "animationThreshold": 2000,
-    "animationDuration": 1000,
-    "animationEasing": "cubicOut",
-    "animationDelay": 0,
-    "animationDurationUpdate": 300,
-    "animationEasingUpdate": "cubicOut",
-    "animationDelayUpdate": 0,
-    "color": [
-        "rgb(255, 242, 0)",
-        "rgb(255, 127, 39)",
-        "#c23531",
-        "#2f4554",
-        "#61a0a8",
-        "#d48265",
-        "#749f83",
-        "#ca8622",
-        "#bda29a",
-        "#6e7074",
-        "#546570",
-        "#c4ccd3",
-        "#f05b72",
-        "#ef5b9c",
-        "#f47920",
-        "#905a3d",
-        "#fab27b",
-        "#2a5caa",
-        "#444693",
-        "#726930",
-        "#b2d235",
-        "#6d8346",
-        "#ac6767",
-        "#1d953f",
-        "#6950a1",
-        "#918597"
-    ],
-    "series": [
-    {
-            type: 'scatter',
-            name: '广东省国家级经开区分布',
-            coordinateSystem: 'geo',
-            symbolSize: 7,
-            color: '#FF6347',
-            itemStyle: {
-                //borderColor: 'blue'
+    pattern1.src = 'https://img-blog.csdnimg.cn/3f52b2f577794a0ebae8188b9c5900a9.png#pic_center'
+
+    var chart_3b5cd3fa8942473698ff6ee95d3d4329 = echarts.init(
+        document.getElementById('3b5cd3fa8942473698ff6ee95d3d4329'), 'white', {renderer: 'canvas'});
+    var option_3b5cd3fa8942473698ff6ee95d3d4329 = {
+        title: {
+            text: '广东省开发区分布图',
+            textStyle: {color: 'white'}
+        },
+        "animation": true,
+        "animationThreshold": 2000,
+        "animationDuration": 1000,
+        "animationEasing": "cubicOut",
+        "animationDelay": 0,
+        "animationDurationUpdate": 300,
+        "animationEasingUpdate": "cubicOut",
+        "animationDelayUpdate": 0,
+        "color": [
+            "rgb(255, 242, 0)",
+            "rgb(255, 127, 39)",
+            "#c23531",
+            "#2f4554",
+            "#61a0a8",
+            "#d48265",
+            "#749f83",
+            "#ca8622",
+            "#bda29a",
+            "#6e7074",
+            "#546570",
+            "#c4ccd3",
+            "#f05b72",
+            "#ef5b9c",
+            "#f47920",
+            "#905a3d",
+            "#fab27b",
+            "#2a5caa",
+            "#444693",
+            "#726930",
+            "#b2d235",
+            "#6d8346",
+            "#ac6767",
+            "#1d953f",
+            "#6950a1",
+            "#918597"
+        ],
+        "series": [
+            {
+                type: 'scatter',
+                name: '广东省国家级经开区分布',
+                coordinateSystem: 'geo',
+                symbolSize: 7,
+                color: '#FF6347',
+                itemStyle: {
+                    //borderColor: 'blue'
+                },
+                data: [
+                    {name: '广州知识城综合保税区', value: [113.537029, 23.079561, 1]},
+                    {name: '广州南沙综合保税区', value: [113.678654, 22.651515, 1]},
+                    {name: '深圳坪山综合保税区', value: [114.369978, 22.728268, 1]},
+                    {name: '福田保税区', value: [114.062762, 22.514223, 1]},
+                    {name: '深圳前海综合保税区', value: [113.885618, 22.506474, 1]},
+                    {name: '深圳盐田综合保税区', value: [114.265486, 22.590123, 1]},
+                    {name: '珠海保税区', value: [113.515398, 22.172958, 1]},
+                    {name: '汕头综合保税区', value: [116.777638, 23.267649, 1]},
+                    {name: '珠澳跨境工业区珠海园区', value: [113.543989, 22.21111, 1]},
+                    {name: '广州黄埔综合保税区', value: [113.548506, 23.080258, 1]},
+                    {name: '白云机场综合保税区', value: [113.405925, 23.35961, 1]},
+                    {name: '东莞虎门港综合保税区', value: [113.598885, 22.863685, 1]},
+                    {name: '珠海高栏港综合保税区', value: [113.244909, 21.959753, 1]},
+                    {name: '梅州综合保税区', value: [115.996178, 24.012408, 1]},
+                    {name: '湛江综合保税区', value: [110.385164, 21.155779, 1]},
+                ],
             },
-            data: [
-                {name: '广州知识城综合保税区', value: [113.537029,23.079561,1]},
-                {name: '广州南沙综合保税区', value: [113.678654,22.651515,1]},
-                {name: '深圳坪山综合保税区', value: [114.369978,22.728268,1]},
-                {name: '福田保税区', value: [114.062762,22.514223,1]},
-                {name: '深圳前海综合保税区', value: [113.885618,22.506474,1]},
-                {name: '深圳盐田综合保税区', value: [114.265486,22.590123,1]},
-                {name: '珠海保税区', value: [113.515398,22.172958,1]},
-                {name: '汕头综合保税区', value: [116.777638,23.267649,1]},
-                {name: '珠澳跨境工业区珠海园区', value: [113.543989,22.21111,1]},
-                {name: '广州黄埔综合保税区', value: [113.548506,23.080258,1]},
-                {name: '白云机场综合保税区', value: [113.405925,23.35961,1]},
-                {name: '东莞虎门港综合保税区', value: [113.598885,22.863685,1]},
-                {name: '珠海高栏港综合保税区', value: [113.244909,21.959753,1]},
-                {name: '梅州综合保税区', value: [115.996178,24.012408,1]},
-                {name: '湛江综合保税区', value: [110.385164,21.155779,1]},
-            ],
-        },
-        ,
-        {
-            type: 'scatter',
-            name: '广东省国家级经开区分布',
-            coordinateSystem: 'geo',
-            symbolSize: 7,
-            itemStyle: {
-                //borderColor: 'blue'
-            },
-            data: [
-                {name: '广州经济技术开发区', value: [113.487216,23.187238,1]},
-                {name: '广州南沙经济技术开发区', value: [113.531387,22.806056,1]},
-                {name: '增城经济技术开发区', value: [113.635566,23.161011,1]},
-                {name: '珠海经济技术开发区', value: [113.193299,22.108271,1]},
-                {name: '惠州大亚湾经济技术开发区', value: [114.543887,22.744746,1]},
-                {name: '湛江经济技术开发区', value: [110.407456,21.02882,1]},
-                {name: '揭东经济技术开发区', value: [116.440447,23.563521,1]},
-                {name: '广州花都经济开发区', value: [113.413849,23.438891,1]},
-                {name: '广州白云工业园区', value: [113.223903,23.274811,1]},
-                {name: '广东从化经济开发区', value: [113.499616,23.447417,1]},
-                {name: '广州云埔工业园区', value: [113.547964,23.130908,1]},
-                {name: '广州番禺经济技术开发区', value: [113.488597,23.038651,1]},
-                {name: '广东珠海富山工业园区', value: [113.153945,22.147741,1]},
-                {name: '广东珠海金湾联港工业园区', value: [113.33015,22.115493,1]},
-                {name: '珠海斗门智能制造经济开发区', value: [113.226257,22.348485,1]},
-                {name: '广东佛山南海经济开发区', value: [112.995483,23.159553,1]},
-                {name: '广东佛山禅城经济开发区', value: [113.029139,23.016673,1]},
-                {name: '广东佛山三水工业园区', value: [113.014025,23.273103,1]},
-                {name: '广东佛山高明沧江工业园区', value: [112.838903,23.003804,1]},
-                {name: '广东惠州惠阳经济开发区', value: [114.495482,22.896699,1]},
-                {name: '广东惠州大亚湾石化产业园区', value: [114.647352,22.770958,1]},
-                {name: '广东惠州工业园区', value: [114.486469,22.982555,1]},
-                {name: '东莞生态产业园', value: [113.925599,23.083363,1]},
-                {name: '广东中山工业园区', value: [113.39555,22.551954,1]},
-                {name: '广东台山广海湾工业园区', value: [112.898285,21.891205,1]},
-                {name: '广东江门新会经济开发区', value: [113.068457,22.459061,1]},
-                {name: '广东肇庆工业园区', value: [112.704767,23.195766,1]},
-                {name: '广东省四会经济开发区', value: [112.80047,23.337732,1]},
-                {name: '肇庆端州双龙经济开发区', value: [112.42376,23.14031,1]},
-                {name: '广东汕头金平工业园区', value: [116.672656,23.396108,1]},
-                {name: '广东汕头龙湖工业园区', value: [116.725086,23.37809,1]},
-                {name: '广东汕尾红海湾经济开发区', value: [115.520468,22.725203,1]},
-                {name: '广东海丰经济开发区', value: [115.376501,22.986038,1]},
-                {name: '广东陆丰东海经济开发区', value: [115.657625,22.914064,1]},
-                {name: '广东潮安经济开发区', value: [116.598128,23.501915,1]},
-                {name: '广东饶平潮州港经济开发区', value: [116.992581,23.672374,1]},
-                {name: '揭阳榕城工业园', value: [116.394568,23.53236,1]},
-                {name: '广东徐闻经济开发区', value: [110.211756,20.282112,1]},
-                {name: '广东廉江经济开发区', value: [110.258134,21.634476,1]},
-                {name: '广东吴川经济开发区', value: [110.79345,21.406546,1]},
-                {name: '广东湛江麻章经济开发区', value: [110.310699,21.279258,1]},
-                {name: '广东湛江临港工业园区', value: [110.384729,21.157638,1]},
-                {name: '广东雷州经济开发区', value: [110.132481,20.996391,1]},
-                {name: '广东茂名电白经济开发区', value: [111.060741,21.463967,1]},
-                {name: '广东信宜经济开发区', value: [110.943789,22.331099,1]},
-                {name: '广东茂名茂南经济开发区', value: [110.922728,21.645508,1]},
-                {name: '广东化州鉴江经济开发区', value: [110.660249,21.668349,1]},
-                {name: '广东高州金山经济开发区', value: [110.873383,21.82311,1]},
-                {name: '广东阳江工业园区', value: [112.025348,21.90587,1]},
-                {name: '广东阳东经济开发区', value: [112.076581,21.930312,1]},
-                {name: '广东翁源经济开发区', value: [113.834437,24.390314,1]},
-                {name: '广东始兴工业园区', value: [114.131889,24.948719,1]},
-                {name: '广东韶关曲江经济开发区', value: [113.530935,24.677544,1]},
-                {name: '广东乳源经济开发区', value: [113.339734,24.754278,1]},
-                {name: '广东乐昌经济开发区', value: [113.375073,25.119496,1]},
-                {name: '广东梅州经济开发区', value: [116.173382,24.286807,1]},
-                {name: '广东五华经济开发区', value: [115.754943,23.934513,1]},
-                {name: '广东丰顺经济开发区', value: [116.195712,23.735726,1]},
-                {name: '广东梅州蕉华工业园区', value: [116.15869,24.61071,1]},
-                {name: '广东云浮工业园区', value: [112.127735,22.981461,1]},
-                {name: '广东清远经济开发区', value: [113.02336,23.745172,1]},
-                {name: '广州琶洲经济开发区', value: [113.349231,23.108524,1]},
-                {name: '广东中山岐江新城经济开发区', value: [113.414134,22.559577,1]},
-                {name: '广东板芙经济开发区', value: [113.330644,22.411054,1]},
-
-            ],
-        },
-        
-    ],
-    "legend": [
-        {
-            data: ['广东省国家级经开区分布'],
-            // "data": [
-            //     "\u7ecf\u5f00\u533a",
-            //     "\u76d1\u7ba1\u533a"
-            // ],
-            "selected": {
-                "\u7ecf\u5f00\u533a": true,
-                "\u76d1\u7ba1\u533a": true
-            },
-            "show": false,
-            "left": "45%",
-            "top": "5%",
-            "padding": 5,
-            "itemGap": 10,
-            "itemWidth": 25,
-            "itemHeight": 14,
-            "textStyle": {
-                "color": "rgb(0, 0, 0)",
-                "fontSize": 15
-            }
-        }
-    ],
-    "tooltip": {
-        "show": true,
-        "trigger": "item",
-        "triggerOn": "mousemove|click",
-        "axisPointer": {
-            "type": "line"
-        },
-        "showContent": true,
-        "alwaysShowContent": false,
-        "showDelay": 0,
-        "hideDelay": 100,
-        "formatter": "{b}",
-        "textStyle": {
-            "fontSize": 14
-        },
-        "borderWidth": 0,
-        "padding": 5
-    },
-    
-    "geo": {
-        "map": "\u5e7f\u4e1c",
-        "roam": true,
-        "aspectScale": 0.75,
-        "nameProperty": "name",
-        "selectedMode": false,
-        "label": {
-            "show": false,
-            "position": "top",
-            "color": "#FCFCFC",
-            "margin": 8,
-            "fontSize": 13
-        },
-        "itemStyle": {
-            "color": "#547ED5",
-            "borderColor": "#F8F8FF",
-            // shadowColor: 'rgba(0, 0, 0, 0.5)',
-            // shadowBlur: 10
-        },
-        "emphasis": {
-            "itemStyle": {
-                "color": "#628BD0"
-            },
-            "label": {
-                "color": "#FFFFFF"
-            }
-        },
-        "regions": [{ // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "广州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                }, // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "佛山市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#2D58AF', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "东莞市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "惠州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "珠海市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "中山市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "江门市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "肇庆市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#2D58AF', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "深圳市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "湛江市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "揭阳市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "潮州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "汕头市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "汕尾市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "茂名市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "阳江市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": {
-                                    image: pattern1,
-                                    repeat: 'repeat'
-                                } // 整个省份的颜色
-                            },
-                        },
-                    },
-
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "韶关市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#688DDA', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "河源市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#688DDA', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "清远市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#688DDA', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "云浮市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#688DDA', // 整个省份的颜色
-                            },
-                        },
-                    },
-                    { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
-                        "name": "梅州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
-                        "itemStyle": {
-                            "normal": {
-                                "opacity": 1, // 透明度
-                                "borderColor": "#ffffff", // 省份界线颜色
-                                "borderWidth": 0.5, // 省份界线的宽度
-                                "areaColor": '#688DDA', // 整个省份的颜色
-                            },
-                        },
-                    },
-
-
-
-
+            ,
+            {
+                type: 'scatter',
+                name: '广东省国家级经开区分布',
+                coordinateSystem: 'geo',
+                symbolSize: 7,
+                itemStyle: {
+                    //borderColor: 'blue'
+                },
+                data: [
+                    {name: '广州经济技术开发区', value: [113.487216, 23.187238, 1]},
+                    {name: '广州南沙经济技术开发区', value: [113.531387, 22.806056, 1]},
+                    {name: '增城经济技术开发区', value: [113.635566, 23.161011, 1]},
+                    {name: '珠海经济技术开发区', value: [113.193299, 22.108271, 1]},
+                    {name: '惠州大亚湾经济技术开发区', value: [114.543887, 22.744746, 1]},
+                    {name: '湛江经济技术开发区', value: [110.407456, 21.02882, 1]},
+                    {name: '揭东经济技术开发区', value: [116.440447, 23.563521, 1]},
+                    {name: '广州花都经济开发区', value: [113.413849, 23.438891, 1]},
+                    {name: '广州白云工业园区', value: [113.223903, 23.274811, 1]},
+                    {name: '广东从化经济开发区', value: [113.499616, 23.447417, 1]},
+                    {name: '广州云埔工业园区', value: [113.547964, 23.130908, 1]},
+                    {name: '广州番禺经济技术开发区', value: [113.488597, 23.038651, 1]},
+                    {name: '广东珠海富山工业园区', value: [113.153945, 22.147741, 1]},
+                    {name: '广东珠海金湾联港工业园区', value: [113.33015, 22.115493, 1]},
+                    {name: '珠海斗门智能制造经济开发区', value: [113.226257, 22.348485, 1]},
+                    {name: '广东佛山南海经济开发区', value: [112.995483, 23.159553, 1]},
+                    {name: '广东佛山禅城经济开发区', value: [113.029139, 23.016673, 1]},
+                    {name: '广东佛山三水工业园区', value: [113.014025, 23.273103, 1]},
+                    {name: '广东佛山高明沧江工业园区', value: [112.838903, 23.003804, 1]},
+                    {name: '广东惠州惠阳经济开发区', value: [114.495482, 22.896699, 1]},
+                    {name: '广东惠州大亚湾石化产业园区', value: [114.647352, 22.770958, 1]},
+                    {name: '广东惠州工业园区', value: [114.486469, 22.982555, 1]},
+                    {name: '东莞生态产业园', value: [113.925599, 23.083363, 1]},
+                    {name: '广东中山工业园区', value: [113.39555, 22.551954, 1]},
+                    {name: '广东台山广海湾工业园区', value: [112.898285, 21.891205, 1]},
+                    {name: '广东江门新会经济开发区', value: [113.068457, 22.459061, 1]},
+                    {name: '广东肇庆工业园区', value: [112.704767, 23.195766, 1]},
+                    {name: '广东省四会经济开发区', value: [112.80047, 23.337732, 1]},
+                    {name: '肇庆端州双龙经济开发区', value: [112.42376, 23.14031, 1]},
+                    {name: '广东汕头金平工业园区', value: [116.672656, 23.396108, 1]},
+                    {name: '广东汕头龙湖工业园区', value: [116.725086, 23.37809, 1]},
+                    {name: '广东汕尾红海湾经济开发区', value: [115.520468, 22.725203, 1]},
+                    {name: '广东海丰经济开发区', value: [115.376501, 22.986038, 1]},
+                    {name: '广东陆丰东海经济开发区', value: [115.657625, 22.914064, 1]},
+                    {name: '广东潮安经济开发区', value: [116.598128, 23.501915, 1]},
+                    {name: '广东饶平潮州港经济开发区', value: [116.992581, 23.672374, 1]},
+                    {name: '揭阳榕城工业园', value: [116.394568, 23.53236, 1]},
+                    {name: '广东徐闻经济开发区', value: [110.211756, 20.282112, 1]},
+                    {name: '广东廉江经济开发区', value: [110.258134, 21.634476, 1]},
+                    {name: '广东吴川经济开发区', value: [110.79345, 21.406546, 1]},
+                    {name: '广东湛江麻章经济开发区', value: [110.310699, 21.279258, 1]},
+                    {name: '广东湛江临港工业园区', value: [110.384729, 21.157638, 1]},
+                    {name: '广东雷州经济开发区', value: [110.132481, 20.996391, 1]},
+                    {name: '广东茂名电白经济开发区', value: [111.060741, 21.463967, 1]},
+                    {name: '广东信宜经济开发区', value: [110.943789, 22.331099, 1]},
+                    {name: '广东茂名茂南经济开发区', value: [110.922728, 21.645508, 1]},
+                    {name: '广东化州鉴江经济开发区', value: [110.660249, 21.668349, 1]},
+                    {name: '广东高州金山经济开发区', value: [110.873383, 21.82311, 1]},
+                    {name: '广东阳江工业园区', value: [112.025348, 21.90587, 1]},
+                    {name: '广东阳东经济开发区', value: [112.076581, 21.930312, 1]},
+                    {name: '广东翁源经济开发区', value: [113.834437, 24.390314, 1]},
+                    {name: '广东始兴工业园区', value: [114.131889, 24.948719, 1]},
+                    {name: '广东韶关曲江经济开发区', value: [113.530935, 24.677544, 1]},
+                    {name: '广东乳源经济开发区', value: [113.339734, 24.754278, 1]},
+                    {name: '广东乐昌经济开发区', value: [113.375073, 25.119496, 1]},
+                    {name: '广东梅州经济开发区', value: [116.173382, 24.286807, 1]},
+                    {name: '广东五华经济开发区', value: [115.754943, 23.934513, 1]},
+                    {name: '广东丰顺经济开发区', value: [116.195712, 23.735726, 1]},
+                    {name: '广东梅州蕉华工业园区', value: [116.15869, 24.61071, 1]},
+                    {name: '广东云浮工业园区', value: [112.127735, 22.981461, 1]},
+                    {name: '广东清远经济开发区', value: [113.02336, 23.745172, 1]},
+                    {name: '广州琶洲经济开发区', value: [113.349231, 23.108524, 1]},
+                    {name: '广东中山岐江新城经济开发区', value: [113.414134, 22.559577, 1]},
+                    {name: '广东板芙经济开发区', value: [113.330644, 22.411054, 1]},
 
                 ],
-    }
-};
-        chart_3b5cd3fa8942473698ff6ee95d3d4329.setOption(option_3b5cd3fa8942473698ff6ee95d3d4329);
-    </script>
+            },
+
+        ],
+        "legend": [
+            {
+                data: ['广东省国家级经开区分布'],
+                // "data": [
+                //     "\u7ecf\u5f00\u533a",
+                //     "\u76d1\u7ba1\u533a"
+                // ],
+                "selected": {
+                    "\u7ecf\u5f00\u533a": true,
+                    "\u76d1\u7ba1\u533a": true
+                },
+                "show": false,
+                "left": "45%",
+                "top": "5%",
+                "padding": 5,
+                "itemGap": 10,
+                "itemWidth": 25,
+                "itemHeight": 14,
+                "textStyle": {
+                    "color": "rgb(0, 0, 0)",
+                    "fontSize": 15
+                }
+            }
+        ],
+        "tooltip": {
+            "show": true,
+            "trigger": "item",
+            "triggerOn": "mousemove|click",
+            "axisPointer": {
+                "type": "line"
+            },
+            "showContent": true,
+            "alwaysShowContent": false,
+            "showDelay": 0,
+            "hideDelay": 100,
+            "formatter": "{b}",
+            "textStyle": {
+                "fontSize": 14
+            },
+            "borderWidth": 0,
+            "padding": 5
+        },
+
+        "geo": {
+            "map": "\u5e7f\u4e1c",
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "label": {
+                "show": false,
+                "position": "top",
+                "color": "#FCFCFC",
+                "margin": 8,
+                "fontSize": 13
+            },
+            "itemStyle": {
+                "color": "#547ED5",
+                "borderColor": "#F8F8FF",
+                // shadowColor: 'rgba(0, 0, 0, 0.5)',
+                // shadowBlur: 10
+            },
+            "emphasis": {
+                "itemStyle": {
+                    "color": "#628BD0"
+                },
+                "label": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "regions": [{ // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                "name": "广州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                "itemStyle": {
+                    "normal": {
+                        "opacity": 1, // 透明度
+                        "borderColor": "#ffffff", // 省份界线颜色
+                        "borderWidth": 0.5, // 省份界线的宽度
+                        "areaColor": {
+                            image: pattern,
+                            repeat: 'repeat'
+                        }, // 整个省份的颜色
+                    },
+                },
+            },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "佛山市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#2D58AF', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "东莞市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "惠州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "珠海市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "中山市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "江门市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "肇庆市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#2D58AF', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "深圳市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "湛江市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "揭阳市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "潮州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "汕头市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "汕尾市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "茂名市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "阳江市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": {
+                                image: pattern1,
+                                repeat: 'repeat'
+                            } // 整个省份的颜色
+                        },
+                    },
+                },
+
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "韶关市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#688DDA', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "河源市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#688DDA', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "清远市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#688DDA', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "云浮市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#688DDA', // 整个省份的颜色
+                        },
+                    },
+                },
+                { // 重点 部分 ,在这里给大家模拟一个省份颜色与界线颜色的修改,如果想修改多个省份就在后面多添加几个对象即可.
+                    "name": "梅州市", // 对应的是import "./china"  数据中的名称如: name: "广东省"(下面有截图)
+                    "itemStyle": {
+                        "normal": {
+                            "opacity": 1, // 透明度
+                            "borderColor": "#ffffff", // 省份界线颜色
+                            "borderWidth": 0.5, // 省份界线的宽度
+                            "areaColor": '#688DDA', // 整个省份的颜色
+                        },
+                    },
+                },
+
+
+            ],
+        }
+    };
+    chart_3b5cd3fa8942473698ff6ee95d3d4329.setOption(option_3b5cd3fa8942473698ff6ee95d3d4329);
+</script>
 </body>
 </html>
